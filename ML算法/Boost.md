@@ -21,8 +21,8 @@ adaboost 算法过程
 ![](https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%2A%7D+%5C%5C+%26+%5Calpha_%7Bm%7D+%3D+%5Cdfrac%7B1%7D%7B2%7D+%5Clog+%5Cdfrac%7B1-e_%7Bm%7D%7D%7Be_%7Bm%7D%7D+%5Cend%7Balign%2A%7D%5C%5C)
 
 4) 更新训练数据集的权值分布
+
 ![](https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%2A%7D+%5C%5C+%26+D_%7Bm%2B1%7D%3D%5Cleft%28w_%7Bm%2B1%2C1%7D%2C%5Ccdots%2Cw_%7Bm%2B1%2Ci%7D%2C%5Ccdots%2Cw_%7Bm%2B1%2CN%7D%5Cright%29+%5C%5C+%26+w_%7Bm%2B1%2Ci%7D+%3D+%5Cdfrac%7Bw_%7Bmi%7D%7D%7BZ_%7Bm%7D%7D+%5Cexp+%5Cleft%28-+%5Calpha_%7Bm%7D+y_%7Bi%7D+G_%7Bm%7D%5Cleft%28x_%7Bi%7D%5Cright%29%5Cright%29%2C+%5C%5C+%26+%5Cquad+%5Cquad+%3D+%5Cleft%5C%7B+%5Cbegin%7Baligned%7D+%5C+%26+%5Cdfrac%7Bw_%7Bmi%7D%7D%7BZ_%7Bm%7D%7D+%5Cexp+%5Cleft%28-+%5Calpha_%7Bm%7D+%5Cright%29%2C+G_%7Bm%7D%5Cleft%28x_%7Bi%7D%5Cright%29+%3D+y_%7Bi%7D+%5C%5C+%26+%5Cdfrac%7Bw_%7Bmi%7D%7D%7BZ_%7Bm%7D%7D+%5Cexp+%5Cleft%28+%5Calpha_%7Bm%7D+%5Cright%29%2C+G_%7Bm%7D%5Cleft%28x_%7Bi%7D%5Cright%29+%5Cneq+y_%7Bi%7D+%5Cend%7Baligned%7D+%5Cright.+%5Cquad+i%3D1%2C2%2C%5Ccdots%2CN+%5Cend%7Balign%2A%7D%5C%5C)
 
 5) 构造分类器
-![](https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%2A%7D+%5C%5C+%26+G%5Cleft%28x%5Cright%29+%3D+sign%5Cleft%28f%5Cleft%28x%5Cright%29%5Cright%29%3Dsign%5Cleft%28%5Csum_%7Bm%3D1%7D%5E%7BM%7D+%5Calpha_%7Bm%7D+G_%7Bm%7D+%5Cleft%28+x+%5Cright%29%5Cright%29+%5Cend%7Balign%2A%7D+%5C%5C）
-
+![](https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%2A%7D+%5C%5C+%26+G%5Cleft%28x%5Cright%29+%3D+sign%5Cleft%28f%5Cleft%28x%5Cright%29%5Cright%29%3Dsign%5Cleft%28%5Csum_%7Bm%3D1%7D%5E%7BM%7D+%5Calpha_%7Bm%7D+G_%7Bm%7D+%5Cleft%28+x+%5Cright%29%5Cright%29+%5Cend%7Balign%2A%7D+%5C%5C)

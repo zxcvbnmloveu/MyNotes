@@ -13,4 +13,6 @@ args = parser.parse_args()
 print(vars(args))
 #输出{'apple':12, 's':'hello'}
 
+python -a 12 -s hello
+
 ```

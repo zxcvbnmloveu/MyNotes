@@ -34,3 +34,6 @@ Gibbs'inequality，H(p,q)>=H(p)， 当且仅当p=q。
 
 ![证明过程](https://baike.baidu.com/item/%E5%90%89%E5%B8%83%E6%96%AF%E4%B8%8D%E7%AD%89%E5%BC%8F/22780937)
 
+多个样本（mini-batch）的平均交叉熵损失函数公式，M为样本数量：
+
+<img src='https://math.jianshu.com/math?formula=Loss%20%3D%20-%5Cfrac%7B1%7D%7BM%7D%5Csum_%7Bi%3D1%7D%5E%7BM%7D%5Csum_%7Bk%3D1%7D%5E%7BN%7Dp_%7Bik%7D%5Clog_2(q_%7Bik%7D)'/>

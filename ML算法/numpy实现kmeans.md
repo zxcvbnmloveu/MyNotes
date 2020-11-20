@@ -110,7 +110,11 @@ plt.scatter(v3[:,0],v3[:,1],s=5)
 plt.scatter(v4[:,0],v4[:,1],s=5)
 plt.show()
 ```
-形心
+
+#### 形心
+
 <img src = 'https://i.bmp.ovh/imgs/2020/11/b4bcf6125e625590.png'/>
-predict
+
+#### predict
+
 <img src = 'https://i.bmp.ovh/imgs/2020/11/f99f88b5a04f3836.png'/>

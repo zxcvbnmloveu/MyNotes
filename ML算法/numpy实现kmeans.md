@@ -118,3 +118,51 @@ plt.show()
 #### predict
 
 <img src = 'https://i.bmp.ovh/imgs/2020/11/f99f88b5a04f3836.png'/>
+
+
+#### pytorch 版本
+
+```python3
+import numpy as np
+import matplotlib.pyplot as plt
+import torch
+from sklearn.utils import shuffle
+from Net import my_kmeans
+
+
+class my_kmeans_torch:
+    def __init__(self, k, n_iters):
+        self.k = k
+        self.n_iter = n_iters
+        self.centroids = None
+
+    def init_clusters(self,x):
+        self.centroids = x[0].reshape(1,-1)
+        # kmeans++
+        for i in range(self.k-1):
+            for j,cj in enumerate(self.centroids):
+                d = ((x-cj)**2).sum(1)
+                if j == 0:
+                    dis = d
+                else:
+                    dis += d
+            self.centroids = torch.cat((self.centroids,x[dis.argmax(0)].reshape(1,-1)),0)
+
+    def fit(self,x):
+        self.init_clusters(x)
+        for i in range(self.k):
+            label = self.predict(x)
+            for j in range(self.k):
+                self.centroids[i] = x[label == j].mean(0)
+
+    def predict(self,x):
+        for j,cj in enumerate(self.centroids):
+            d = ((x-cj)**2).sum(1)
+            if j == 0:
+                dis = d.reshape(1,-1)
+            else:
+                dis = torch.cat((dis,d.reshape(1,-1)),0)
+
+        label = dis.argmin(1)
+        return label
+```

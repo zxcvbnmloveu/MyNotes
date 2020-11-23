@@ -29,10 +29,10 @@ self._enc_log_sigma = torch.nn.Linear(100, 8)
 ```
 
 代码很好懂。
-![代码地址](https://github.com/ethanluoyc/pytorch-vae/blob/master/vae.py)
+[代码地址](https://github.com/ethanluoyc/pytorch-vae/blob/master/vae.py)
 
 两篇比较好的博客
-![(1)](http://kvfrans.com/variational-autoencoders-explained/)
-![(2)](https://zhuanlan.zhihu.com/p/64485020)
+[(1)](http://kvfrans.com/variational-autoencoders-explained/)
+[(2)](https://zhuanlan.zhihu.com/p/64485020)
 
 但是都没有回答到我上面的问题~
